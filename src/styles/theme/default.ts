@@ -15,7 +15,7 @@ export const defaultTheme = {
       "brand-purple-dark": "#4B2995",
       "brand-purple": "#8047F8",
       "brand-purple-light": "#EBE5F9",
-      "brand-pink-dark": "#F092dd",
+      "brand-pink-dark": "#c444a8",
       "brand-pink": "#FFAFF0",
       "brand-pink-light": "#eec8e0",
       "brand-green": "#a8c7bb",
