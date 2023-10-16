@@ -3,6 +3,8 @@ import { QuantityInput } from "../../../../components/QuantityInput";
 import { RegularText, TitleText } from "../../../../components/Typography";
 import { AddProductWrapper, Description, Name, ProductCardContainer, ProductFooter, Tags } from "./styles";
 import { formatMoney } from "../../../../utils/formartMoney";
+import { useCart } from "../../../../hooks/useCart";
+import { useState } from "react";
 
 export interface Product{
     id: number;
@@ -18,6 +20,25 @@ interface ProductProps{
 }
 
 export function ProductCard({ product }: ProductProps){
+    const [quantity, setQuantity] = useState(1);
+    const { addProductToCart } = useCart();
+
+    function handleIncrease(){
+        setQuantity(state => state + 1);
+    }
+
+    function handleDecrease(){
+        setQuantity(state => state - 1);
+    }
+
+    function handleAddToCart(){
+        const productToAdd = {
+            ...product,
+            quantity
+        }
+        addProductToCart(productToAdd);
+    }
+
     const formattedPrice = formatMoney(product.price);
 
     return(
@@ -41,8 +62,8 @@ export function ProductCard({ product }: ProductProps){
                 </div>
 
                 <AddProductWrapper>
-                    <QuantityInput />
-                    <button>
+                    <QuantityInput onIncrease={handleIncrease} onDecrease={handleDecrease} quantity={quantity}/>
+                    <button onClick={handleAddToCart}>
                         <ShoppingCart weight="fill" size={20}/>
                     </button>
                 </AddProductWrapper>
