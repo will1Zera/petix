@@ -23,7 +23,7 @@ export function OrderConfirmedPage(){
         if(!state){
             navigate("/");
         }
-    }, []);
+    }, [navigate, state]);
 
     if(!state) return <></>;
 
