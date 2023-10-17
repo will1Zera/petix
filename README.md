@@ -7,7 +7,7 @@
   Petix é um site de um petshop com vários produtos, possui as funcionalidades de carrinho e finalização de compras.
 </p>
 <p align="center">
-  <img src="/public/Petixx.png" align="center" style="border-radius: 10px" />
+  <img src="https://github.com/will1Zera/petix/blob/main/public/images/Petixx.png?raw=true" align="center" style="border-radius: 10px" />
 </p>
 
 Link para o [servidor hospedado](https://petixx.vercel.app/)
