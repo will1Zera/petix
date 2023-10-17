@@ -5,6 +5,12 @@ export const CompleteOrderContainer = styled.form`
     display: flex;
     justify-content: center;
     gap: 2rem;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 30px;
+    }
 `;
 
 export const SectionBaseStyle = styled.div`

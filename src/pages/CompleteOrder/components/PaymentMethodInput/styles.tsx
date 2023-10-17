@@ -1,6 +1,22 @@
 import styled from "styled-components";
 
 export const PaymentMethodInputContainer = styled.div`
+    input{
+        visibility: hidden;
+        appearance: none;
+    }
+
+    input:checked + label div{
+        background-color: ${({ theme }) => theme.colors["brand-purple-light"]};
+        border-color: ${({ theme }) => theme.colors["brand-purple"]};
+
+        &:hover{
+            background-color: ${({ theme }) => theme.colors["brand-purple-light"]};
+        }
+    }
+`;
+
+export const ContentContainer = styled.div`
     padding: 0 1rem;
     background-color: ${({ theme }) => theme.colors["base-button"]};
     color: ${({ theme }) => theme.colors["base-text"]};
@@ -14,6 +30,7 @@ export const PaymentMethodInputContainer = styled.div`
     height: 3rem;
     border: 1px solid ${({ theme }) => theme.colors["base-button"]};
     transition: .4s;
+    cursor: pointer;
 
     svg{
         color: ${({ theme }) => theme.colors["brand-pink-dark"]};

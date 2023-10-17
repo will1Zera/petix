@@ -8,7 +8,7 @@ import { formatMoney } from "../../../../utils/formartMoney";
 const DELIVERY_PRICE = 3.99;
 
 export function ConfirmationSection() {
-  const { cartItemsTotal, cartQuantity } = useCart();
+  const { cartItemsTotal } = useCart();
   const cartTotal = DELIVERY_PRICE + cartItemsTotal;
 
   const formattedItemsTotal = formatMoney(cartItemsTotal);
@@ -30,8 +30,8 @@ export function ConfirmationSection() {
             <RegularText size="l" color="subtitle" weight="700">R$ {formattedCartTotal}</RegularText>
         </div>
         <NavLink to="/orderConfirmed">
-          <Button text="confirmar pedido" disabled={cartItemsTotal <= 0}/>
         </NavLink>
+          <Button text="confirmar pedido" disabled={cartItemsTotal <= 0} type="submit"/>
         
     </ConfirmationSectionContainer>
   );

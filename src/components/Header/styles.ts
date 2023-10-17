@@ -20,6 +20,10 @@ export const HeaderContainer = styled.header`
             width: 121px;
         }
     }
+
+    @media (max-width: 1200px) {
+      padding-inline: 30px;
+    }
 `;
 
 export const HeaderLinks = styled.div`

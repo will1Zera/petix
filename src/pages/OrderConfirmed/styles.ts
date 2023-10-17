@@ -18,6 +18,16 @@ export const OrderConfirmedContainer = styled.div`
         img{
             width: 20rem;
         }
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+    }
+
+    > div{
+        @media (max-width: 1200px) {
+            text-align: center;
+        }
     }
 `;
 

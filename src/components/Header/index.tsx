@@ -18,8 +18,6 @@ export function Header(){
                     <Links>
                         <ul>
                             <li><Link to="/">Início</Link></li>
-                            <li><Link to="/about">Sobre</Link></li>
-                            <li><Link to="/contact">Contato</Link></li>
                         </ul>
                     </Links>
                     <NavLink to="/completeOrder">
